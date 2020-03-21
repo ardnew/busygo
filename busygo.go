@@ -191,7 +191,7 @@ func main() {
 
 	fn, fa := invokedAs, os.Args[1:]
 	if "" != argf {
-		fn = argf
+		fn, fa = argf, flag.Args()
 	}
 
 	_, prop, ok := resolve(fn)
